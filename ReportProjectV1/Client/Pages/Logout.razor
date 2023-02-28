@@ -1,0 +1,10 @@
+﻿@using ReportProjectV1.Client.ServicesImplementation;
+@page "/logout"
+@inject AuthenticationService AuthenticationService
+
+@code {
+    protected override async void OnInitialized()
+    {
+        await AuthenticationService.Logout();
+    }
+}

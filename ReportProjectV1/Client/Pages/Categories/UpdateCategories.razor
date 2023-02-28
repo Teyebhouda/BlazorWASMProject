@@ -1,0 +1,105 @@
+﻿@using ReportProjectV1.Shared.Models;
+@using Newtonsoft.Json;
+@using ReportProjectV1.Client.Services;
+@inject Blazored.Toast.Services.IToastService ToastService
+@inject IGenericServices<Category> CategoryService;
+
+@page "/Categoryedit"
+@page "/Categoryedit/{Id:int}"
+
+<section class="Category-edit text-center">
+
+    <h1 class="page-title">@Title</h1>
+
+    <EditForm Model="@Categorydata" OnValidSubmit="@HandleValidSubmit">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <div class="form-group row justify-content-center">
+            <label for="categoryname" class="col-form-label col-sm-2">Username: </label>
+            <div class="col-sm-8 col-md-5">
+                <InputText id="ategoryname" class="form-control" @bind-Value="@Categorydata.CategoryName" placeholder="Category name"></InputText>
+                <ValidationMessage For="@(() => Categorydata.CategoryName)" />
+            </div>
+        </div>
+     
+        <button type="submit" class="btn btn-success mr-2">Save Category</button>
+
+        <button class="btn btn-info" type="submit" @onclick="@NavigateToCategorysPage">Back</button>
+    </EditForm>
+</section>
+
+
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    public Category Categorydata = new Category();
+    protected string Title = "Add new Category";
+    public string FormSubmitMessage { get; set; } = "Fail to update Category";
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id != 0)
+        {
+            var Category = await CategoryService.GetByIdAsync(Id);
+
+            if (Category != null)
+            {
+                Categorydata = Category;
+                Title = $"Edit {Categorydata.CategoryName}";
+            }
+            else
+            {
+                Categorydata = new Category();
+                ToastService.ShowError("Something went wrong while loading the book.");
+            }
+        }
+    }
+    private void NavigateToCategorysPage()
+    {
+        NavigationManager.NavigateTo("/ListCategories");
+    }
+
+    public async Task HandleValidSubmit()
+    {
+
+
+        if (Categorydata.Id == 0)
+            await AddCategory();
+        else
+            await EditCategory();
+
+    }
+    public void HandleInvalidSubmit() => FormSubmitMessage = "Invalid Category";
+
+
+    private async Task AddCategory()
+    {
+        var result = await CategoryService.CreateAsync(Categorydata);
+        if (result != null)
+        {
+            ToastService.ShowSuccess("The Category was successfully added.");
+            NavigateToCategorysPage();
+        }
+        else
+        {
+            ToastService.ShowError("Something went wrong while adding the Category. Please try again.");
+        }
+    }
+    private async Task EditCategory()
+    {
+        var result = await CategoryService.UpdateAsync(Categorydata);
+        if (result)
+        {
+            ToastService.ShowSuccess("The Category was successfully updated.");
+            NavigateToCategorysPage();
+        }
+        else
+        {
+            ToastService.ShowError("Something went wrong while updating the Category. Please try again.");
+        }
+    }
+
+}

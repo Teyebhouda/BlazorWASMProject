@@ -1,0 +1,77 @@
+﻿@page "/login"
+@using Newtonsoft.Json;
+@using ReportProjectV1.Client.ServicesImplementation;
+@using ReportProjectV1.Shared.Models
+@using ReportProjectV1.Client.Services
+@inject IJSRuntime JsRuntime
+@inject Blazored.Toast.Services.IToastService ToastService
+@inject IGenericServices<User> UserService
+@inject AuthenticationService AuthenticationService
+@inject IAuthService AuthService
+
+<h1>Login</h1>
+
+@if (errorMessage != null)
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+<EditForm Model="@UserData" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label>User Name</label>
+        <ValidationMessage For="@(() => UserData.Username)" />
+        <InputText class="form-control" @bind-Value="@UserData.Username" />
+    </div>
+    <div class="form-group">
+        <label>User Password</label>
+        <ValidationMessage For="@(() => UserData.Password)" />
+        <InputText class="form-control" @bind-Value="@UserData.Password" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+</EditForm>
+
+
+@code {
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+    public User UserData = new User();
+    public string FormSubmitMessage { get; set; } = "";
+    private string? errorMessage;
+
+    public IEnumerable<User> Users { get; set; } = Enumerable.Empty<User>();
+
+    public IEnumerable<User> CompleteListUsers { get; set; } = Enumerable.Empty<User>();
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        Users = await UserService.GetAll();
+
+    }
+
+    public async Task HandleValidSubmit()
+    {
+        if (!string.IsNullOrEmpty(UserData.Username) && !string.IsNullOrEmpty(UserData.Password))
+        {
+
+
+              AuthService.login(UserData);
+            
+            
+            
+            }
+
+
+
+        }
+       
+    public void HandleInvalidSubmit() => FormSubmitMessage = "Invalid username or password";
+}
+
+  

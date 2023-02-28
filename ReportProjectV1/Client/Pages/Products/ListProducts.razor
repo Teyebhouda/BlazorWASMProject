@@ -1,0 +1,142 @@
+﻿@using Newtonsoft.Json;
+@using ReportProjectV1.Shared.Models
+@using ReportProjectV1.Client.Services
+@inject IJSRuntime JsRuntime
+@inject Blazored.Toast.Services.IToastService ToastService
+@inject IGenericServices<Product> ProductService
+@page "/ListProducts"
+
+<div class="jumbtron">
+    <h1 class="display-4 text-center">Products</h1>
+</div>
+<div class="col-md-12">
+    <button type="button" class="btn btn-success" @onclick="@AddProductPage">New Product</button>
+    <hr />
+</div>
+
+
+<div class="form-group">
+    <label for="Search">Search</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        <input type="text" class="form-control" placeholder="Search byname, reference or category"
+               @bind-value="@SearchedValue" @bind-value:event="oninput" @onkeyup="async () => SearchProduct()">
+        </input>
+    </div>
+</div>
+
+@if (Products == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead>
+            <tr>
+                <th class="col-lg-2">Product N°</th>
+                <th class="col-lg-2">Product Name</th>
+                <th class="col-lg-2">Product Reference</th>
+                    <th class="col-lg-2">Product Category</th>
+                <th class="col-lg-3">Product Description</th>
+                <th class="col-lg-2">Product Price</th>
+                <th class="col-lg-2">Options</th>
+
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Product p in Products)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.ProductName</td>
+                    <td>@p.ProductRef</td>
+                     <td>@p.CategoryName</td>
+                    <td>@p.ProductDescription</td>
+                    <td>@p.ProductPrice</td>
+                  
+
+                    <td>
+                        <a href="@($"productedit/"+@p.Id)" class="btn btn-light">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-light" @onclick="() => DeleteProduct(p)">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+
+
+                    </td>
+
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code
+{
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    public IEnumerable<Product> Products { get; set; } = Enumerable.Empty<Product>();
+
+    public IEnumerable<Product> CompleteListProducts { get; set; } = Enumerable.Empty<Product>();
+
+    protected string SearchedValue { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Products = await ProductService.GetAll();
+        CompleteListProducts = Products;
+    }
+    //add
+    protected void AddProductPage()
+    {
+        NavigationManager.NavigateTo("/productedit");
+    }
+    //delete
+    private async Task DeleteProduct(Product u)
+    {
+        bool confirm = await JsRuntime.InvokeAsync<bool>("confirm", $"Are you sure you want to delete the Product {u.ProductName }?");
+        if (confirm)
+        {
+            if (await ProductService.DeleteAsync(u.Id))
+            {
+                Products = await ProductService.GetAll();
+                CompleteListProducts = Products;
+                ToastService.ShowSuccess("Deleted successfully");
+                StateHasChanged();
+            }
+            else
+            {
+                ToastService.ShowError("Something went wrong while deleting the Product. Please try again.");
+            }
+        }
+    }
+
+    protected void SearchProduct()
+    {
+        if (!string.IsNullOrEmpty(SearchedValue))
+        {
+            var searchedValueLowerCase = SearchedValue.ToLower();
+            Products = CompleteListProducts.Where(u => u.ProductName.ToLower().Contains(searchedValueLowerCase)  ).ToList();
+                           
+        }
+        else
+        {
+            Products = CompleteListProducts;
+        }
+    }
+
+}
+

@@ -1,0 +1,54 @@
+﻿@using ReportProjectV1.Shared.Models;
+@using Newtonsoft.Json;
+@using ReportProjectV1.Client.Services;
+@inject IGenericServices<User> UserService;
+@page "/AddUserPage"
+<link href="css/Validation.css" rel="stylesheet" />
+
+<h1 class="bg-info text-white">Add User</h1>
+<h2 class="text-success p-2">@FormSubmitMessage</h2>
+
+<EditForm Model="UserData" OnValidSubmit="HandleValidSubmit" OnInvalidSubmit="HandleInvalidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label>User Name</label>
+        <ValidationMessage For="@(() => UserData.Username)" />
+        <InputText class="form-control" @bind-Value="UserData.Username" />
+    </div>
+    <div class="form-group">
+        <label>User Password</label>
+        <ValidationMessage For="@(() => UserData.Password)" />
+        <InputText class="form-control" @bind-Value="UserData.Password" />
+    </div>
+  
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Click</button>
+    </div>
+</EditForm>
+
+
+
+@code {
+    public User UserData = new User();
+
+
+    public string FormSubmitMessage { get; set; } = "User Not Added";
+
+    public async Task HandleValidSubmit()
+    {
+
+
+
+
+        await UserService.CreateAsync(UserData);
+
+
+        FormSubmitMessage = "the User is Added";
+    }
+
+
+    public void HandleInvalidSubmit() => FormSubmitMessage = "Invalid User";
+}

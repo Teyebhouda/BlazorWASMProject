@@ -1,0 +1,69 @@
+﻿@using ReportProjectV1.Shared.Models;
+@using Newtonsoft.Json;
+@using ReportProjectV1.Client.Services;
+@inject AppState appstate;
+@inject IGenericServices<Product> ProductService;
+@page "/AddProductPage"
+<link href="css/Validation.css" rel="stylesheet" />
+
+<h1 class="bg-info text-white">Add Product</h1>
+<h2 class="text-success p-2">@FormSubmitMessage</h2>
+
+<EditForm Model="ProductData" OnValidSubmit="HandleValidSubmit" OnInvalidSubmit="HandleInvalidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label>Name</label>
+        <ValidationMessage For="@(() => ProductData.ProductName)" />
+        <InputText class="form-control" @bind-Value="ProductData.ProductName" />
+    </div>
+    <div class="form-group">
+        <label>Reference</label>
+        <ValidationMessage For="@(() => ProductData.ProductRef)" />
+        <InputText class="form-control" @bind-Value="ProductData.ProductRef" />
+    </div>
+    <div class="form-group">
+        <label>description</label>
+        <ValidationMessage For="@(() => ProductData.ProductDescription)" />
+        <InputText class="form-control" @bind-Value="ProductData.ProductDescription" />
+    </div>
+
+    <div class="form-group">
+        <label>Price</label>
+        <ValidationMessage For="@(() => ProductData.ProductPrice)" />
+        <InputNumber class="form-control" @bind-Value="ProductData.ProductPrice" />
+    </div>
+    <div class="form-group">
+        <label>Category</label>
+        <ValidationMessage For="@(() => ProductData.IDCategory)" />
+        <InputNumber class="form-control" @bind-Value="ProductData.IDCategory" />
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Click</button>
+    </div>
+</EditForm>
+
+      
+
+@code {
+    public Product ProductData = new Product();
+   
+
+    public string FormSubmitMessage { get; set; } = "Product Not Added";
+
+    public async Task HandleValidSubmit()
+    {
+       
+
+
+        await ProductService.CreateAsync(ProductData);
+       
+            
+        FormSubmitMessage = "the Product is Added";
+            }
+    
+
+    public void HandleInvalidSubmit() => FormSubmitMessage = "Invalid Product";
+}

@@ -1,0 +1,116 @@
+﻿
+@using ReportProjectV1.Shared.Models;
+@using Newtonsoft.Json;
+@using ReportProjectV1.Client.Services;
+@inject Blazored.Toast.Services.IToastService ToastService
+@inject IGenericServices<User> UserService;
+
+@page "/useredit"
+@page "/useredit/{Id:int}"
+
+    <section class="user-edit text-center">
+
+    <h1 class="page-title">@Title</h1>
+
+    <EditForm Model="@userdata" OnValidSubmit="@HandleValidSubmit">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+
+        <div class="form-group row justify-content-center">
+            <label for="username" class="col-form-label col-sm-2">Username: </label>
+            <div class="col-sm-8 col-md-5">
+                <InputText id="username" class="form-control" @bind-Value="@userdata.Username" placeholder="Username"></InputText>
+                <ValidationMessage For="@(() => userdata.Username)" />
+            </div>
+        </div>
+         <div class="form-group row justify-content-center">
+            <label for="password" class="col-form-label col-sm-2">Password: </label>
+            <div class="col-sm-8 col-md-5">
+                <InputText id="username" class="form-control" @bind-Value="@userdata.Password" placeholder="Password"></InputText>
+                <ValidationMessage For="@(() => userdata.Password)" />
+            </div>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-success mr-2">Save User</button>
+
+        <button class="btn btn-info" type="submit" @onclick="@NavigateToUsersPage">Back</button>
+    </EditForm>
+</section>
+
+
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    public User userdata = new User();
+    protected string Title = "Add new User";
+    public string FormSubmitMessage { get; set; } = "Fail to update user";
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id != 0)
+        {
+            var user = await UserService.GetByIdAsync(Id); 
+
+            if (user != null)
+            {
+                userdata = user;
+                Title = $"Edit {userdata.Username}";
+            }
+            else
+            {
+                userdata = new User();
+                ToastService.ShowError("Something went wrong while loading the book.");
+            }
+        }
+    }
+    private void NavigateToUsersPage()
+    {
+        NavigationManager.NavigateTo("/ListUsers");
+    }
+
+    public async Task HandleValidSubmit()
+    {
+
+
+        if (userdata.Id == 0)
+            await AddUser();
+        else
+            await EditUser();
+
+    }
+    public void HandleInvalidSubmit() => FormSubmitMessage = "Invalid User";
+
+
+    private async Task AddUser()
+    {
+        var result = await UserService.CreateAsync(userdata);
+        if (result != null)
+        {
+            ToastService.ShowSuccess("The user was successfully added.");
+            NavigateToUsersPage();
+        }
+        else
+        {
+            ToastService.ShowError("Something went wrong while adding the user. Please try again.");
+        }
+    }
+    private async Task EditUser()
+    {
+        var result = await UserService.UpdateAsync(userdata);
+        if (result)
+        {
+            ToastService.ShowSuccess("The user was successfully updated.");
+            NavigateToUsersPage();
+        }
+        else
+        {
+            ToastService.ShowError("Something went wrong while updating the user. Please try again.");
+        }
+    }
+
+}

@@ -1,0 +1,46 @@
+﻿@using ReportProjectV1.Shared.Models;
+@using Newtonsoft.Json;
+@using ReportProjectV1.Client.Services;
+@inject IGenericServices<Category> CategoryService;
+@page "/AddCategoryPage"
+<link href="css/Validation.css" rel="stylesheet" />
+
+<h1 class="bg-info text-white">Add Category</h1>
+<h2 class="text-success p-2">@FormSubmitMessage</h2>
+
+<EditForm Model="CategoryData" OnValidSubmit="HandleValidSubmit" OnInvalidSubmit="HandleInvalidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label>Category Name</label>
+        <ValidationMessage For="@(() => CategoryData.CategoryName)" />
+        <InputText class="form-control" @bind-Value="CategoryData.CategoryName" />
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Click</button>
+    </div>
+</EditForm>
+
+
+
+@code {
+    public Category CategoryData = new Category();
+
+
+    public string FormSubmitMessage { get; set; } = "Category Not Added";
+
+    public async Task HandleValidSubmit()
+    {
+
+
+        await CategoryService.CreateAsync(CategoryData);
+
+
+        FormSubmitMessage = "the Category is Added";
+    }
+
+
+    public void HandleInvalidSubmit() => FormSubmitMessage = "Invalid Category";
+}

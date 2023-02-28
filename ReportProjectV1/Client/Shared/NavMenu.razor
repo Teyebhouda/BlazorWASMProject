@@ -1,0 +1,66 @@
+﻿@using ReportProjectV1.Client.ServicesImplementation
+@using Blazored.Toast.Configuration
+@inject AuthenticationService AuthenticationService
+@inject NavigationManager NavigationManager
+
+
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">ReportProjectV1</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+   <AuthorizeView Roles="Admin">     
+      
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+          <Authorized>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="login" Match="NavLinkMatch.All">
+                        <span class="oi oi-home" aria-hidden="true"></span> Log in
+                    </NavLink>
+                </div>
+    </Authorized>
+
+      <NotAuthorized>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="ListUsers">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Users Management
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="ListProducts">
+                <span class="oi oi-book" aria-hidden="true"></span> Products Management
+            </NavLink>
+        </div>
+       
+                    <div class="nav-item px-3">
+                        <NavLink class="nav-link" href="ListCategories">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> CategoriesManagement
+                        </NavLink>
+                    </div>
+            </NotAuthorized>
+    </nav>
+</div>
+
+</AuthorizeView>
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

@@ -1,0 +1,173 @@
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.csproj.AssemblyReference.cache
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.AssemblyInfoInputs.cache
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.AssemblyInfo.cs
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.csproj.CoreCompileInputs.cache
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.RazorAssemblyInfo.cache
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.RazorAssemblyInfo.cs
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Client.staticwebassets.runtime.json
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\appsettings.json
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\BrowserDebugHost.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\BrowserDebugProxy.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Newtonsoft.Json.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.staticwebassets.runtime.json
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.exe
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.deps.json
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.runtimeconfig.json
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.pdb
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Blazored.Toast.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\JSRuntimeWindow.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.JSInterop.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.JSInterop.WebAssembly.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Client.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Shared.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Client.pdb
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Shared.pdb
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.ReportProjectV1.Server.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.build.ReportProjectV1.Server.props
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.ReportProjectV1.Server.props
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.ReportProjectV1.Server.props
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\scopedcss\bundle\ReportProjectV1.Server.styles.css
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.csproj.CopyComplete
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\refint\ReportProjectV1.Server.dll
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.pdb
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.genruntimeconfig.cache
+C:\Users\HD FRONT\source\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ref\ReportProjectV1.Server.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.csproj.AssemblyReference.cache
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.AssemblyInfoInputs.cache
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.AssemblyInfo.cs
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.csproj.CoreCompileInputs.cache
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.RazorAssemblyInfo.cache
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.RazorAssemblyInfo.cs
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Client.staticwebassets.runtime.json
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\appsettings.json
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\BrowserDebugHost.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\BrowserDebugProxy.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Newtonsoft.Json.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.staticwebassets.runtime.json
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.exe
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.deps.json
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.runtimeconfig.json
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.pdb
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Blazored.Toast.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\JSRuntimeWindow.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.JSInterop.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.JSInterop.WebAssembly.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\System.Text.Json.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Client.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Shared.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Client.pdb
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Shared.pdb
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.ReportProjectV1.Server.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.build.ReportProjectV1.Server.props
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.ReportProjectV1.Server.props
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.ReportProjectV1.Server.props
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\scopedcss\bundle\ReportProjectV1.Server.styles.css
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.csproj.CopyComplete
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\refint\ReportProjectV1.Server.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.pdb
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.genruntimeconfig.cache
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ref\ReportProjectV1.Server.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Client.staticwebassets.runtime.json
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\appsettings.json
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\BrowserDebugHost.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\BrowserDebugProxy.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\BlazorDebugProxy\Newtonsoft.Json.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.staticwebassets.runtime.json
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.exe
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.deps.json
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.runtimeconfig.json
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Server.pdb
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Blazored.Toast.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\JSRuntimeWindow.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.JSInterop.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Microsoft.JSInterop.WebAssembly.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Client.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Shared.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Client.pdb
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\ReportProjectV1.Shared.pdb
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.csproj.AssemblyReference.cache
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.AssemblyInfoInputs.cache
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.AssemblyInfo.cs
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.csproj.CoreCompileInputs.cache
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.RazorAssemblyInfo.cache
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.RazorAssemblyInfo.cs
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.ReportProjectV1.Server.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.build.ReportProjectV1.Server.props
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.ReportProjectV1.Server.props
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.ReportProjectV1.Server.props
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\scopedcss\bundle\ReportProjectV1.Server.styles.css
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.csproj.CopyComplete
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\refint\ReportProjectV1.Server.dll
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.pdb
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ReportProjectV1.Server.genruntimeconfig.cache
+C:\Users\HD FRONT\source\repos\ReportProjectV1\ReportProjectV1\Server\obj\Debug\net7.0\ref\ReportProjectV1.Server.dll
+C:\Users\HD\source\repos\ReportProjectV1\ReportProjectV1\Server\bin\Debug\net7.0\Blazored.LocalStorage.dll

@@ -1,0 +1,135 @@
+﻿
+
+@using Newtonsoft.Json;
+@using ReportProjectV1.Shared.Models
+@using ReportProjectV1.Client.Services
+@inject IJSRuntime JsRuntime
+@inject Blazored.Toast.Services.IToastService ToastService
+@inject IGenericServices<User> UserService
+@page "/ListUsers"
+
+<div class="jumbtron">
+    <h1 class="display-4 text-center">Users</h1>
+</div>
+<div class="col-md-12">
+    <button type="button" class="btn btn-success" @onclick="@AddUserPage">New User</button>
+    <hr />
+</div>
+
+
+<div class="form-group">
+    <label for="Search">Search</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        <input type="text" class="form-control" placeholder="Search by name"
+               @bind-value="@SearchedValue" @bind-value:event="oninput" @onkeyup="async () => SearchUser()">
+        </input>
+    </div>
+</div>
+
+@if (Users == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+<table class="table table-sm table-striped table-bordered m-2">
+    <thead>
+        <tr>
+                <th class="col-lg-2">User N°</th>
+                <th class="col-lg-2">User Name</th>
+                <th class="col-lg-2">User Password</th>
+                <th class="col-lg-2">Options</th>
+
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (User u in Users)
+        {
+            <tr>
+                    <td >@u.Id</td>
+                <td>@u.Username</td>
+                <td>@u.Password</td>
+                
+                <td>
+                        <a href="@($"useredit/"+@u.Id)" class="btn btn-light">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-light" @onclick="() => DeleteUser(u)">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+
+
+                </td>
+             
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+}
+
+
+    @code
+    {
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+    
+    public IEnumerable<User> Users { get; set; } = Enumerable.Empty<User>();
+
+    public IEnumerable<User> CompleteListUsers { get; set; } = Enumerable.Empty<User>();
+
+    protected string SearchedValue { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Users = await UserService.GetAll();
+        CompleteListUsers = Users;
+    }
+    protected void AddUserPage()
+    {
+        NavigationManager.NavigateTo("/useredit");
+    }
+
+    private async Task DeleteUser(User u)
+    {
+        bool confirm = await JsRuntime.InvokeAsync<bool>("confirm", $"Are you sure you want to delete the user {u.Username}?");
+        if (confirm)
+        {
+            if (await UserService.DeleteAsync(u.Id))
+            {
+                Users = await UserService.GetAll();
+                CompleteListUsers = Users;
+                ToastService.ShowSuccess("Deleted successfully");
+                StateHasChanged();
+            }
+            else
+            {
+                ToastService.ShowError("Something went wrong while deleting the user. Please try again.");
+            }
+        }
+    }
+
+    protected void SearchUser()
+    {
+        if (!string.IsNullOrEmpty(SearchedValue))
+        {
+            var searchedValueLowerCase = SearchedValue.ToLower();
+            Users = CompleteListUsers.Where(u => u.Username.ToLower().Contains(searchedValueLowerCase) ).ToList();
+        }
+        else
+        {
+            Users = CompleteListUsers;
+        }
+    }
+
+}
+

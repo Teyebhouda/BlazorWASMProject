@@ -1,0 +1,146 @@
+﻿@using ReportProjectV1.Shared.Models;
+@using Newtonsoft.Json;
+@using ReportProjectV1.Client.Services;
+@inject Blazored.Toast.Services.IToastService ToastService
+@inject IGenericServices<Product> ProductService;
+
+@inject IGenericServices<Category> CategoryService;
+@page "/productedit"
+@page "/productedit/{Id:int}"
+
+<section class="Product-edit text-center">
+
+    <h1 class="page-title">@Title</h1>
+
+    <EditForm Model="@Productdata" OnValidSubmit="@HandleValidSubmit">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+
+        <div class="form-group row justify-content-center">
+            <label for="Productname" class="col-form-label col-sm-2">Productname: </label>
+            <div class="col-sm-8 col-md-5">
+                <InputText id="Productname" class="form-control" @bind-Value="@Productdata.ProductName" placeholder="ProductName"></InputText>
+                <ValidationMessage For="@(() => Productdata.ProductName)" />
+            </div>
+        </div>
+        <div class="form-group row justify-content-center">
+            <label for="password" class="col-form-label col-sm-2">Reference: </label>
+            <div class="col-sm-8 col-md-5">
+                <InputText id="Productname" class="form-control" @bind-Value="@Productdata.ProductRef" placeholder="REF"></InputText>
+                <ValidationMessage For="@(() => Productdata.ProductRef)" />
+            </div>
+        </div>
+        <div class="form-group row justify-content-center">
+            <label for="password" class="col-form-label col-sm-2">Description: </label>
+            <div class="col-sm-8 col-md-5">
+                <InputText id="Productname" class="form-control" @bind-Value="@Productdata.ProductDescription" placeholder="Description"></InputText>
+                <ValidationMessage For="@(() => Productdata.ProductDescription)" />
+            </div>
+        </div>
+        <div class="form-group row justify-content-center">
+            <label for="categoryId" class="col-form-label col-sm-2">Category: </label>
+            <div class="col-sm-8 col-md-5">
+                <InputSelect id="categoryId" @bind-Value="@Productdata.IDCategory" class="form-select form-control" placeholder="Category">
+                    <option selected disabled hidden value="0">Select a category</option>
+                    @foreach (var category in CategoryList)
+                    {
+                        <option value="@category.Id">@category.CategoryName</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="@(() => Productdata.IDCategory)" />
+            </div>
+        </div>
+        <div class="form-group row justify-content-center">
+            <label for="password" class="col-form-label col-sm-2">Price: </label>
+            <div class="col-sm-8 col-md-5">
+                <InputNumber id="Productname" class="form-control" @bind-Value="@Productdata.ProductPrice" placeholder="Price"></InputNumber>
+                <ValidationMessage For="@(() => Productdata.ProductPrice)" />
+            </div>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-success mr-2">Save Product</button>
+
+        <button class="btn btn-info" type="submit" @onclick="@NavigateToProductsPage">Back</button>
+    </EditForm>
+</section>
+
+
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+    public IEnumerable<Category> CategoryList { get; set; } = new List<Category>();
+
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    public Product Productdata = new Product();
+    protected string Title = "Add new Product";
+    public string FormSubmitMessage { get; set; } = "Fail to update Product";
+    protected override async Task OnInitializedAsync()
+    {
+
+        CategoryList = await CategoryService.GetAll();
+        if (Id != 0)
+        {
+            var Product = await ProductService.GetByIdAsync(Id);
+
+            if (Product != null)
+            {
+                Productdata = Product;
+                Title = $"Edit {Productdata.ProductName}";
+            }
+            else
+            {
+                Productdata = new Product();
+                ToastService.ShowError("Something went wrong while loading the book.");
+            }
+        }
+    }
+    private void NavigateToProductsPage()
+    {
+        NavigationManager.NavigateTo("/ListProducts");
+    }
+
+    public async Task HandleValidSubmit()
+    {
+
+
+        if (Productdata.Id == 0)
+            await AddProduct();
+        else
+            await EditProduct();
+
+    }
+    public void HandleInvalidSubmit() => FormSubmitMessage = "Invalid Product";
+
+
+    private async Task AddProduct()
+    {
+        var result = await ProductService.CreateAsync(Productdata);
+        if (result != null)
+        {
+            ToastService.ShowSuccess("The Product was successfully added.");
+            NavigateToProductsPage();
+        }
+        else
+        {
+            ToastService.ShowError("Something went wrong while adding the Product. Please try again.");
+        }
+    }
+    private async Task EditProduct()
+    {
+        var result = await ProductService.UpdateAsync(Productdata);
+        if (result)
+        {
+            ToastService.ShowSuccess("The Product was successfully updated.");
+            NavigateToProductsPage();
+        }
+        else
+        {
+            ToastService.ShowError("Something went wrong while updating the Product. Please try again.");
+        }
+    }
+
+}
